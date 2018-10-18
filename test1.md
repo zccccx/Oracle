@@ -11,13 +11,13 @@ GROUP BY department_name;
 ```
 执行结果：
 
-(./1.png)
+![](./1.png)
 
 分析：
 
 *   执行计划
 
-(./2.png)
+![](./2.png)
 
 *   优化建议：sqldeveloper的优化指导工具给出了相应的优化建议，通过创建一个或多个索引可以改进此语句的执行计划。
 
@@ -32,13 +32,13 @@ HAVING d.department_name in ('IT','Sales');
 ```
 执行结果：
 
-(./3.png)
+![](./3.png)
 
 分析：
 
 *   执行计划
 
-(./4.png)
+![](./4.png)
 
 *   优化建议：sqldeveloper的优化指导工具未给出优化建议。
 
