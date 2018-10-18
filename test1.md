@@ -42,8 +42,8 @@ HAVING d.department_name in ('IT','Sales');
 
 *   优化建议：sqldeveloper的优化指导工具未给出优化建议。
 
-比较：
-通过分析上面两个比较复杂的返回相同查询结果数据集的SQL语句各自的执行计划，比较消耗得出查询2更加快捷，原因是代码中使用having，先过滤再分组，提高了效率
+### 比较：通过分析上面两个比较复杂的返回相同查询结果数据集的SQL语句各自的执行计划，比较消耗得出查询2更加快捷，原因是代码中使用having，先过滤再分组，提高了效率
+
 ## 自定义查询
 ```SQL
 SELECT d.department_name,count(e.job_id)as "部门总人数",
