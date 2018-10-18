@@ -44,4 +44,13 @@ HAVING d.department_name in ('IT','Sales');
 
 比较：
 通过分析上面两个比较复杂的返回相同查询结果数据集的SQL语句各自的执行计划，比较消耗得出查询2更加快捷，原因是代码中使用having，先过滤再分组，提高了效率
-
+## 自定义查询
+```SQL
+SELECT d.department_name,count(e.job_id)as "部门总人数",
+avg(e.salary)as "平均工资"
+FROM hr.departments d,hr.employees e
+WHERE d.department_id = e.department_id
+and d.department_name = 'Shipping' or d.department_name = 'Marketing'
+GROUP BY department_name
+```
+![](./5.png)
