@@ -56,4 +56,4 @@ GROUP BY department_name
 * 查询结果
 ![](./5.png)
 * 优化建议
-！[](./6.png)
+![](./6.png)
