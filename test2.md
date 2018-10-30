@@ -14,21 +14,21 @@ Oracle有一个开发者角色resource，可以创建表、过程、触发器等
 
 对于以下的对象名称con_res_view，new_user，在实验的时候应该修改为自己的名称。
 
-- 第1步：以system登录到pdborcl，创建角色con_res_view和用户new_user，并授权和分配空间：
+- 第1步：以system登录到pdborcl，创建角色huajia和用户zdq2，并授权和分配空间：
 
 ![](./img/21.png)
 > 语句“ALTER USER new_user QUOTA 50M ON users;”是指授权new_user用户访问users表空间，空间限额是50M。
 
-- 第2步：新用户new_user连接到pdborcl，创建表mytable和视图myview，插入数据，最后将myview的SELECT对象权限授予hr用户。
+- 第2步：新用户zdq2连接到pdborcl，创建表mytable和视图myview，插入数据，最后将myview的SELECT对象权限授予hr用户。
 
 ![](./img/22.png)
 ![](./img/23.png)
 
-- 第3步：用户hr连接到pdborcl，查询new_user授予它的视图myview
+- 第3步：用户hr连接到pdborcl，查询zdq2授予它的视图myview
 
 ![](./img/24.png)
 
-> 测试一下同学用户之间的表的共享，只读共享和读写共享都测试一下。
+
 
 ## 数据库和表空间占用分析
 
